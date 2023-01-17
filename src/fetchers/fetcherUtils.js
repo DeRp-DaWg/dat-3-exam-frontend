@@ -1,5 +1,5 @@
-export const backendAPIURL = "http://localhost:8080/api/"
-// export const backendAPIURL = "https://larspeterjoergensen.com/dat-3-exam-backend/api/"
+// export const backendAPIURL = "http://localhost:8080/api/"
+export const backendAPIURL = "https://larspeterjoergensen.com/dat-3-exam-backend/api/"
 
 export var token = ""
 

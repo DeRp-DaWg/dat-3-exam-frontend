@@ -1,5 +1,15 @@
-// export const backendAPIURL = "http://localhost:8080/api/"
-export const backendAPIURL = "https://larspeterjoergensen.com/dat-3-exam-backend/api/"
+export const backendAPIURL = "http://localhost:8080/api/"
+// export const backendAPIURL = "https://larspeterjoergensen.com/dat-3-exam-backend/api/"
+
+export var token = ""
+
+export function setRoles(newRoles) {
+  roles = newRoles
+}
+
+export function setToken(_token) {
+  token = _token
+}
 
 export function fetchURL(URL, data) {
   if (!data) data = dataFactory("GET")

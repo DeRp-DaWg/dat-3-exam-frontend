@@ -30,7 +30,11 @@ export default function SimpleTripList() {
   
   function handleDelete(index, value) {
     tripFetcher.deleteTrip(value)
-    setRows(rows => {rows.splice(index,1)})
+    setRows(rows => {
+      const newRows = [...rows]
+      newRows.splice(index,1)
+      return newRows
+    })
   }
   
   return (

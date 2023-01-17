@@ -13,7 +13,7 @@ export default function Root() {
         <Container>
           <Navbar.Brand as={NavLink} to="/">Trip Searcher</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/user/trip">Trips</Nav.Link>
+            
           </Nav>
           <Nav>
             {roles.includes("user") && <Nav.Link as={NavLink} to="/user">User page</Nav.Link>}

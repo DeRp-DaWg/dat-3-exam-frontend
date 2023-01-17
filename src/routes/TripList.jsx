@@ -31,7 +31,7 @@ export default function TripList() {
               <Button variant="primary" as={NavLink} to={""+trip.id}>More</Button>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">Starts in {msToTime(trip.duration)}</small>
+              <small className="text-muted">Duration: {msToTime(trip.duration)}</small>
             </Card.Footer>
           </Card>
         </Col>

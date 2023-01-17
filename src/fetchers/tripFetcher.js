@@ -39,3 +39,14 @@ export async function deleteTrip(id) {
   const trip = fetchURL(backendAPIURL+"trip/"+id, dataFactory("DELETE", null, headers))
   return trip
 }
+
+export async function joinTrip(username, id) {
+  const headers = {
+    "x-access-token":token 
+  }
+  const body = {
+    "username": username,
+  }
+  const trip = fetchURL(backendAPIURL+"trip/"+id, dataFactory("PUT", body, headers))
+  return trip
+}

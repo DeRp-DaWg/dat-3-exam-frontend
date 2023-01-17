@@ -97,7 +97,7 @@ const router = createBrowserRouter([
     ]
   },
 ], {
-  basename: "/dat-3-exam"
+  basename: "/DAT-3-Exam"
 })
 
 ReactDOM.createRoot(document.getElementById('root')).render(

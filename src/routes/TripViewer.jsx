@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react'
 import { Button } from 'react-bootstrap';
-import { NavLink, useRouteLoaderData } from 'react-router-dom'
+import { NavLink, useOutletContext, useRouteLoaderData } from 'react-router-dom'
+import * as tripFetcher from '../fetchers/tripFetcher'
 
 export default function TripViewer() {
+  const context = useOutletContext()
+  const [username] = context.username
   const {trip} = useRouteLoaderData("trip")
   
   function msToTime(s) {
@@ -14,6 +17,10 @@ export default function TripViewer() {
     var hrs = (s - mins) / 60;
     
     return hrs + " hours and " + mins + " minutes";
+  }
+  
+  function handleJoin(value) {
+    tripFetcher.joinTrip(username, value)
   }
   
   return (
@@ -40,6 +47,7 @@ export default function TripViewer() {
           )
         })}
       </ul>
+      <Button value={trip.id} onClick={event => {handleJoin(event.target.value)}}>Join</Button>
     </div>
   )
 }

@@ -154,7 +154,7 @@ export default function TripCreator() {
           <Form.Control value={tripDTO.duration} onChange={event => setTripDTO(trip => {return {...trip, duration: event.target.value}})}/>
         </Form.Group>
         {fields}
-        <Button onClick={createGuide}>Create new field</Button>
+        <Button onClick={createGuide}>Create new guide</Button>
         {/* <div>
           <Form.Group className="mb-3" controlId="formTripPackingList">
           <Form.Control value={tripDTO.packingList} onChange={event => setTripDTO(trip => {return {...trip, packingList: event.target.value}})}/>
